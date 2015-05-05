@@ -13,10 +13,38 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
     
-    @RequestMapping(value= "/", method = RequestMethod.GET)
+    @RequestMapping(value= {"/", "/home" } , method = RequestMethod.GET)
     public ModelAndView displayHome() {
         ModelAndView model = new ModelAndView("home");
         model.addObject("name", "Tjeerdjan");
+        model.addObject("title", "home");
+        
+        return model;
+    }
+    
+    @RequestMapping(value= "/authors" , method = RequestMethod.GET)
+    public ModelAndView displayAuthors() {
+        ModelAndView model = new ModelAndView("authors");
+        
+        model.addObject("title", "authors");
+        
+        return model;
+    }
+    
+    @RequestMapping(value= "/books" , method = RequestMethod.GET)
+    public ModelAndView displayBooks() {
+        ModelAndView model = new ModelAndView("books");
+        
+        model.addObject("title", "books");
+        
+        return model;
+    }
+    
+    @RequestMapping(value= "/articles" , method = RequestMethod.GET)
+    public ModelAndView displayArticles() {
+        ModelAndView model = new ModelAndView("articles");
+        
+        model.addObject("title", "articles");
         
         return model;
     }

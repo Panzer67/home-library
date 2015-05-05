@@ -1,0 +1,58 @@
+
+
+body {
+    margin: 0 auto;
+    font-family: arial;
+    font-size: 18px;
+}
+
+html {
+    background-color: #623590;
+    overflow-y: scroll;
+}
+
+
+/********
+Navigatie
+********/
+
+#nav_wrapper {
+    background-color: #CE2717;
+    box-shadow: 0 2px 5px black;
+}
+
+#nav {
+    width:  960px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#nav ul li {
+    display: inline-block;
+    width: 160px;
+}
+
+#nav ul li a {
+    color: #1F1F1F;
+    display: block;
+    padding: 20px 25px;
+    text-decoration: none;
+}
+
+#nav ul li a:hover {
+    background-color: #B00000;
+    text-decoration: none;
+}
+
+#nav ul li a.active {
+    background-color: #B00000;
+}
