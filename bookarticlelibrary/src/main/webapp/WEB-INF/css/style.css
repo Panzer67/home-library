@@ -7,24 +7,24 @@ body {
 }
 
 html {
-    background-color: #623590;
+    background-color: #9d9d9d;
     overflow-y: scroll;
 }
 
 
 /********
-Navigatie
+Navigatie 
 ********/
 
 #nav_wrapper {
-    background-color: #CE2717;
+    background-color: #214c6c;
     box-shadow: 0 2px 5px black;
 }
 
 #nav {
     width:  960px;
     margin: 0 auto;
-    text-align: left;
+    font-size: 0;
     position: relative;
     z-index: 100;
 }
@@ -38,21 +38,65 @@ Navigatie
 
 #nav ul li {
     display: inline-block;
-    width: 160px;
+    width: 236px; 
+    
 }
 
 #nav ul li a {
     color: #1F1F1F;
     display: block;
-    padding: 20px 25px;
+    padding: 20px 40px;
     text-decoration: none;
+    text-align: center;
+    font-size: 26px;
 }
 
 #nav ul li a:hover {
-    background-color: #B00000;
+    background-color: #193950;
     text-decoration: none;
 }
 
 #nav ul li a.active {
-    background-color: #B00000;
+    background-color: #193950;
+}
+
+/*************
+Content
+*************/
+
+.wrapper {
+    width: 960px;
+    min-height: 600px;
+    margin: 0 auto;
+    overflow: auto;   
+}
+
+
+
+
+/***************
+Footer
+***************/
+
+#footer {
+    width: 960px;
+    height: 40px;
+    background-color: #193950;
+    margin: 10px auto;
+    box-shadow: 0 2px 5px black;
+}
+
+#copyright {
+    float: right;
+    padding: 8px 10px;
+    
+}
+
+#copyright a {
+    color: black;
+    text-decoration: none;
+}
+
+#copyright a:hover {
+    text-decoration: underline;
 }
