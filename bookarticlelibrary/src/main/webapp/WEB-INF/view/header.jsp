@@ -26,6 +26,9 @@
                     <li>
                         <a <c:if test="${title == 'articles'}"> class="active" </c:if> href="<c:url value="/articles" /> " >Articles</a>
                     </li>
+                    <li>
+                        <a <c:if test="${title == 'journals'}"> class="active" </c:if> href="<c:url value="/journals" /> " >Journals</a>
+                    </li>
                 </ul>
                 
             </div>            

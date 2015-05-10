@@ -3,13 +3,12 @@
 <jsp:include page="header.jsp" />
 
 <div class="wrapper">
-    <h1>Authors</h1>   
-    
-        <div class="CSSTableGenerator" >
+        
+        <div class="librarytable" >
                 <table >
                     <tr>
                         <td>
-                            No
+                            No.
                         </td>
                         <td>
                             Author(s)
@@ -40,7 +39,6 @@
                    
                 </table>
             </div>
-            
 </div>
 
 

@@ -2,27 +2,76 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="header.jsp" />
 
-<div class="wrapper">
-    <h2>Article</h2>
-    <table border="1">
-        <th>No</th>
-        <th>Title</th>
-        <th>Author(s)</th>
-        <th>Journal</th>
-        <th>Actions</th>			        	
-
-        <tr>
-            <td></td>
-            <td>${article.title}</td>
-            <td><c:forEach var="author" items="${article.getAuthors()}" varStatus="status" >${author.firstname}&nbsp;${author.lastname}</br></c:forEach></td>
-            <td>${article.getJournal().journal_name}</td>
-            <td>
-                <a href="<c:url value="editarticle/${article.id}" /> ">Edit</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="<c:url value="deletearticle/${article.id}" /> ">Delete</a>
-            </td>
-        </tr>
-
-    </table>   	
+<div class="wrapper">    
+    <div class="librarytable">
+        <table>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    Article
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Title
+                </td>
+                <td>
+                    ${article.title}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Author(s)
+                </td>
+                <td>
+                    <c:forEach var="author" items="${article.getAuthors()}" varStatus="status" >
+                        <a href="<c:url value="/authors/author/${author.id}" />" >${author.firstname}&nbsp;${author.lastname}</a></br>
+                    </c:forEach>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Journal
+                </td>
+                <td>
+                    <a href="<c:url value="/journals/journal/${article.getJournal().id}" />" >${article.getJournal().journal_name}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Volume
+                </td>
+                <td>
+                    ${article.volume}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Issue
+                </td>
+                <td>
+                    ${article.issue}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Year
+                </td>
+                <td>
+                    ${article.year}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pages
+                </td>
+                <td>
+                    ${article.pages}
+                </td>
+            </tr>
+        </table>
+    </div>     
 </div>
 <jsp:include page="footer.jsp" />
